@@ -26,7 +26,8 @@ $(function () {
         'ItxUtilsFct',
         'ItxStaticResourceSvc',
         'timestampSvc',
-        'ItxScreenSizeSvc'
+        'ItxScreenSizeSvc',
+        'cmsLookbookSvc',
     ];
 
     function ItxMainComponentCtrl(
@@ -41,7 +42,8 @@ $(function () {
         ItxUtilsFct,
         ItxStaticResourceSvc,
         timestampSvc,
-        ItxScreenSizeSvc
+        ItxScreenSizeSvc,
+        cmsLookbookSvc,
     ) {
         var _this = this;
         console.log('sss')
@@ -218,20 +220,22 @@ $(function () {
 
         };
         _this.showLook = function(id) {
-            alert('showing'+id);
-            imMicrositeService.createProductEvent(_this.bundle);
-            imMicrositeService.createPopupViewBundle(_this.bundle);
+            
+            
+            //imMicrositeService.createProductEvent(id);
+            //imMicrositeService.createPopupViewBundle(id);
 
             // Si es una webview de las apps, redrigimos al bundle
             if (mdUtils.isWebapp()) {
 
-                window.location.href= 'massimodutti://virtualStore/product/' + _this.bundle.id;
+                window.location.href= 'massimodutti://virtualStore/product/' + id;
 
                 return;
             }
-
+            cmsLookbookSvc.managementActionCms( {productId:id});
+            
             // Parsea los productos del bundle
-            BundleSvc.parseBundleProducts(_this.bundle).then(function (bundles) {
+            /*BundleSvc.parseBundleProducts(id).then(function (bundles) {
 
                 // Abre la ventana modal con los productos del bundle
                 ngDialog.open({
@@ -248,7 +252,7 @@ $(function () {
                     }
                 });
 
-            });
+            });*/
         };
 
         // Función para obtener la imagen de un bundle dado
