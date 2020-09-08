@@ -201,11 +201,11 @@ $(function () {
             _this.image89 = _this.getResizedImage("assets/image_s2_p45.jpg");
             _this.image90 = _this.getResizedImage("assets/image_s2_p48.jpg");
             _this.image91 = _this.getResizedImage("assets/image_s2_p49.jpg");
-            _this.image92 = _this.getResizedImage("assets/image_s2_p3.jpg");
-            _this.image93 = _this.getResizedImage("assets/image_s2_p5.jpg");
+            _this.image92 = _this.getResizedImage("assets/image_s2_p12.jpg");
+            _this.image93 = _this.getResizedImage("assets/image_s2_p16.jpg");
             _this.image94 = _this.getResizedImage("assets/image_s2_p9.jpg");
-            _this.image95 = _this.getResizedImage("assets/image_s2_p12.jpg");
-            _this.image96 = _this.getResizedImage("assets/image_s2_p16.jpg");
+            _this.image95 = _this.getResizedImage("assets/image_s2_p3.jpg");
+            _this.image96 = _this.getResizedImage("assets/image_s2_p5.jpg");
             _this.image97 = _this.getResizedImage("assets/image_s2_p19.jpg");
             _this.image98 = _this.getResizedImage("assets/image_s2_p25.jpg");
             _this.image99 = _this.getResizedImage("assets/image_s2_p28.jpg");
