@@ -47,9 +47,11 @@ $(function () {
     ) {
         var _this = this;
         _this.$onInit = function () {
-            console.log('onInit')
+            _this.inditexReady = false
             _this.getInfo();
             inditex.onReady(function() {
+
+                _this.inditexReady = true
 
                 document.querySelector('.dallonses').classList.add(mdUtils.isWebapp() ? 'is-webapp' : 'is-web')
 
