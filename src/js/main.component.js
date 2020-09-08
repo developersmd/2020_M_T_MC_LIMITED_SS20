@@ -266,10 +266,11 @@ function getEl(element){return document.querySelector(".dallonses ".concat(eleme
             //imMicrositeService.createPopupViewBundle(id);
 
             // Si es una webview de las apps, redrigimos al bundle
+            var scrollHeight = window.scrollY;
             if (mdUtils.isWebapp()) {
 
                 window.location.href= 'massimodutti://virtualStore/product/' + id;
-
+                window.scrollTo(0, scrollHeight)
                 return;
             }
             cmsLookbookSvc.managementActionCms( {productId:id});
