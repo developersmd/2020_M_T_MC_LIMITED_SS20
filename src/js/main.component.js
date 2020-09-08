@@ -27,7 +27,7 @@ $(function () {
         'ItxStaticResourceSvc',
         'timestampSvc',
         'ItxScreenSizeSvc',
-        'cmsLookbookSvc',
+        // 'cmsLookbookSvc',
     ];
 
     function ItxMainComponentCtrl(
@@ -43,7 +43,7 @@ $(function () {
         ItxStaticResourceSvc,
         timestampSvc,
         ItxScreenSizeSvc,
-        cmsLookbookSvc,
+        // cmsLookbookSvc,
     ) {
         var _this = this;
         _this.$onInit = function () {
